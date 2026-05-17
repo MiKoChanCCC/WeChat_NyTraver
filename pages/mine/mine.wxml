@@ -1,0 +1,43 @@
+<!--pages/mine/mine.wxml-->
+<navigation-bar title="我的" back="{{false}}" color="white" background="#9195a3"></navigation-bar>
+<!-- 已登录展示 -->
+<block wx:if="{{true}}">
+    <view class="mine-header">
+        <view class="header-avatar">
+            <image class="avatar" src="/images/avatar.png" mode="" />
+        </view>
+        <view class="header-userInfo">
+            <text class="userInfo-name">昵称:张三</text>
+            <text class="userInfo-login">账户:19005234567</text>
+        </view>
+    </view>
+    <view class="mine-content">
+        <view class="content-item">
+            <image class="item-bg" src="/images/酒店住宿.png" mode="" />
+            <text class="item-title" bindtap="hotelOrder">酒店住宿订单</text>
+            <image class="arrow-bg" src="/images/arrow_right.png" mode="" />
+        </view>
+        <view class="content-item">
+            <image class="item-bg" src="/images/9.png" mode="" />
+            <text class="item-title">账户信息</text>
+            <image class="arrow-bg" src="/images/arrow_right.png" mode="" />
+        </view>
+        <view class="content-item">
+            <image class="item-bg" src="/images/setting.png" mode="" />
+            <text class="item-title">设置</text>
+            <image class="arrow-bg" src="/images/arrow_right.png" mode="" />
+        </view>
+        <view class="content-item">
+            <image class="item-bg" src="/images/4.png" mode="" />
+            <text class="item-title" bindtap="clearStorage">清除缓存</text>
+            <image class="arrow-bg" src="/images/arrow_right.png" mode="" />
+        </view>
+        <view class="content-item">
+            <image class="item-bg" src="/images/5.png" mode="" />
+            <text class="item-title" bindtap="logout">退出登录</text>
+            <image class="arrow-bg" src="/images/arrow_right.png" mode="" />
+        </view>
+    </view>
+</block>
+<!-- 未登录展示 -->
+<button class="contact" type="primary" open-type="contact" style="width: 400rpx;border-radius: 20px;margin:60rpx auto;">客服</button>

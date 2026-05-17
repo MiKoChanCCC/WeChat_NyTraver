@@ -1,0 +1,84 @@
+page{
+    background-color: #efefef;
+}
+.content{
+    width: 100%;
+    height: 90vh;
+    overflow: auto;
+}
+.userInfo{
+    width: 90%;
+    margin: 20rpx 5%;
+    padding: 20rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+}
+.userInfo-item{
+    width: 100%;
+    height: 90rpx;
+    margin:20rpx 0;
+    color: #27282b;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #d5d6d8;
+}
+.userInfo :nth-last-child(1){
+    border-bottom: none;
+}
+.userInfo-item text{
+    display: inline-block;
+    margin-right: 30rpx;
+    width: 25%;
+}
+.userInfo-item input::-webkit-input-placeholder{
+    color: #9195a3;
+}
+
+/* 发票相关 */
+.userBill{
+    width: 680rpx;
+    padding: 0 20rpx;
+    box-sizing: border-box;
+    margin: 30rpx 35rpx;
+    background-color: #fff;
+    border-radius: 20rpx;
+}
+.bill-title{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e4;
+}
+.bill-content{
+    width: 100%;
+}
+
+.bill-item{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #e1e1e4;
+}
+.bill-item text{
+    display: inline-block;
+    width: 250rpx;
+}
+/* 同意相关协议 */
+.traverGuide{
+    width: 100%;
+    height: 50rpx;
+    padding: 0 40rpx;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+.traverGuide .guide-read{
+    display: flex;
+    color: #9195a3;
+}

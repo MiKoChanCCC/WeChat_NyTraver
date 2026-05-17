@@ -1,0 +1,15 @@
+<navigation-bar title="酒店住宿" color="white" back background="#9195a3"></navigation-bar>
+<scroll-view class="content" scroll-y type="list">
+    <view class="content-hotel">
+        <view class="hotel-item" bindtap="goDetail" data-id="{{item.id}}" wx:for="{{hotelList}}" wx:key="index">
+            <image class="item-left" src="{{item.imageSrc}}" mode=""/>
+            <view class="item-right">
+                <text class="right-title">{{item.title}}</text>
+                <text class="right-score">
+                    评分:{{item.score}}
+                </text>
+                <text class="right-price">价格:{{item.price}}/天</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>

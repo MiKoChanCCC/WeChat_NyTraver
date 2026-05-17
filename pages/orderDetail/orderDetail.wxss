@@ -1,0 +1,170 @@
+page{
+    background-color: #efefef;
+}
+.ticket{
+    width: 710rpx;
+    margin: 20rpx;
+    padding: 20rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+}
+.ticket-info{
+    width: 100%;
+    height: 120rpx;
+}
+.ticket-info{
+    display: flex;
+    justify-content: space-between;
+}
+.start-time{
+    display: flex;
+    flex-direction: column;
+    font-size: 36rpx;
+}
+.other-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 28rpx;
+    color: #776b64;
+}
+.end-time{
+    display: flex;
+    flex-direction: column;
+    font-size: 36rpx;
+}
+.ticket-userInfo{
+    width: 100%;
+    height: 200rpx;
+    padding: 15rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border:1px solid #776b64;
+    border-radius: 20rpx;
+}
+.ticket-userInfo .userName{
+    font-size: 36rpx;
+    font-weight: bold;
+}
+.ticket-userInfo .userInfo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.ticket-userInfo .userInfo .left{
+    display: flex;
+    flex-direction: column;
+    font-size: 26rpx;
+    color:#776b64
+}
+.ticket-userInfo .userInfo .right text{
+    width: 80rpx;
+    height: 50rpx;
+    display: inline-block;
+    text-align: center;
+    background-color: #776b64;
+    color: #fff;
+    margin: 0 10rpx;
+}
+
+.tickets{
+    width: 710rpx;
+    margin: 0 20rpx;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+.tickets-trip{
+    width: 100%;
+    height: 130px;
+}
+.trip-city{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 38rpx;
+    font-weight: 800;
+}
+.trip-bg image{
+    width: 200rpx;
+    height: 30rpx;
+}
+.trip-time{
+    padding:0 30rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaa4aa;
+}
+.trip-seat{
+    padding: 0 30rpx;
+    margin: 20rpx 0;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #aaa4aa;
+}
+.seat-tip{
+    background-color: #ffaa43;
+    color: #efefef;
+}
+.trip-orderNum{
+    padding: 0 30rpx;
+    color: #756666;
+}
+
+.primary-user{
+    width: 710rpx;
+    height: 150rpx;
+    margin: 15rpx 20rpx;
+    padding: 15rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    color: #aaa4aa;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #fff;
+}
+.primary-user-title{
+    display: flex;
+    align-items: center;
+}
+.primary-user .head-bg{
+    width: 40rpx;
+    height: 40rpx;
+    margin-right: 20rpx;
+}
+
+.users{
+    width: 710rpx;
+    height: 100rpx;
+    margin: 10rpx 20rpx;
+    padding:15rpx;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 20rpx;
+    display: flex;
+    flex-direction: column;
+    color:#776b64;
+    font-size: 30rpx;
+}
+
+.bill{
+    width: 710rpx;
+    height: 60rpx;
+    margin: 0 20rpx;
+    padding:0 20rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    line-height: 60rpx;
+    color: #776b64;
+    font-size: 30rpx;
+    background-color: #fff;
+}

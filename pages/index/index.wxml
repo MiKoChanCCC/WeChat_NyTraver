@@ -1,0 +1,122 @@
+<!--index.wxml-->
+<navigation-bar title="南云出行" back="{{false}}" color="white" background="#9195a3"></navigation-bar>
+<scroll-view class="scrollarea" scroll-y type="list">
+  <!-- 轮播图部分 -->
+  <swiper class="swiper" indicator-dots autoplay circular>
+      <swiper-item>
+          <image class="item-img" src="/images/banner1.png" mode="aspectFill"/>
+      </swiper-item>
+      <swiper-item>
+          <image class="item-img" src="/images/banner2.png" mode="aspectFill"/>
+      </swiper-item>
+  </swiper>
+  <view class="ways">
+      <view class="{{type === 0 ? 'active' : ''}}" bindtap="changeWay" data-type="{{0}}">单程</view>
+      <view class="{{type === 1 ? 'active' : ''}}" bindtap="changeWay" data-type="{{1}}">往返</view>
+  </view>
+  <view class="citySelect">
+      <view class="startCity" bindtap="selectCity" data-type="start">
+          <text>{{startCity}}</text>
+      </view>
+      <!-- 中间城市对调图标 -->
+      <view class="changeBtn">
+          <view bindtap="swapCity" animation="{{animation}}">
+            <image class="outer" src="/images/形状3.png" mode=""/>
+          </view>
+          <image src="/images/形状2.png" mode="" class="inner"/>
+      </view>
+      <view class="endCity" bindtap="selectCity" data-type="end">
+          <text>{{endCity}}</text>
+      </view>
+  </view>
+  <view class="middleLine"></view>
+  <view class="showDate">
+      <view class="showDate-start">
+        <picker mode="date" value="{{FSdate.currentday}}" start="{{FSdate.startday}}" bindchange="bindDateChange" data-type="1">
+            <text>{{FSdate.date}},{{FSdate.week}}</text>
+        </picker>
+        <picker mode="time" start="00:00" end="23:00" value="{{startTime}}" bindchange="bindTimeChange" data-type="start">
+          <text>{{startTime}}出发</text>
+        </picker>
+      </view>
+      <view class="showDate-end" wx:if="{{type === 1 ? true : false}}">
+        <picker mode="date" value="{{FSdate.currentday}}" start="{{FSdate.startday}}" bindchange="bindDateChange" data-type="1">
+            <text>{{FEdate.date}},{{FEdate.week}}</text>
+        </picker>
+        <!-- 时间选择部分 -->
+        <picker mode="time" start="00:00" end="23:00" value="{{backTime}}" bindchange="bindTimeChange" data-type="back">
+            <text>{{backTime}}返回</text>
+        </picker>
+      </view>
+  </view>
+  <!-- 选择学生还是成人票 -->
+  <view class="selectStuOrAdu">
+      <radio-group bindchange="checkboxChange">
+          <view class="left">
+              <radio value="student"/>
+              <text>学生票</text>
+          </view>
+          <view class="line"></view>
+          <view class="right">
+              <radio value="adult" checked/>
+              <text>成人票</text>
+          </view>
+      </radio-group>
+  </view>
+  <view class="moreSelect">
+    <text class="all">全部</text>
+    <text class="railway">只看高铁/动车</text>
+    <checkbox-group bindchange="exchange">
+        <checkbox value="exchange"/>
+        <text>兑换车次</text>
+    </checkbox-group>
+  </view>
+  <!-- 确认按钮 -->
+  <button class="confirm" type="primary" style="width: 690rpx;background-color: #919fa3;" bindtap="confirmBtn">购买车票</button>
+
+  <!-- 推荐引导部分 -->
+  <view class="recommend">
+      <view class="recommend-item">
+          <image src="/images/车站大屏.png" mode=""/>
+          <text>车站大屏</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/空铁联运.png" mode=""/>
+          <text>空铁联运</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/约车.png" mode=""/>
+          <text>约车</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/餐饮.png" mode=""/>
+          <text>餐饮·特产</text>
+      </view>
+      <view class="recommend-item" bindtap="goHotel">
+          <image src="/images/酒店住宿.png" mode=""/>
+          <text>酒店住宿</text>
+      </view>
+  </view>
+  <view class="recommend">
+      <view class="recommend-item">
+          <image src="/images/温馨服务.png" mode=""/>
+          <text>温馨服务</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/出行保险.png" mode=""/>
+          <text>出行保险</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/签证办理.png" mode=""/>
+          <text>签证办理</text>
+      </view>
+      <view class="recommend-item">
+          <image src="/images/汽车票.png" mode=""/>
+          <text>汽车票</text>
+      </view>
+      <view class="recommend-item" bindtap="goHotel">
+          <image src="/images/铁水联运.png" mode=""/>
+          <text>铁水联运</text>
+      </view>
+  </view>
+</scroll-view>

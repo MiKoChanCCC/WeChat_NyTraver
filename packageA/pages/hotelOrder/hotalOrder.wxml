@@ -1,0 +1,43 @@
+<navigation-bar title="酒店住宿订单" color="white" background="#9195a3" back="true"></navigation-bar>
+<view class="content">
+    <!-- 酒店订单部分 -->
+    <view class="hotel-order" wx:if="{{hotelList.length > 0}}">
+        <view class="order-item" wx:for="{{hotelList}}" wx:key="index">
+            <checkbox-group bindchange="">
+                <checkbox value="" bindtap="checkedChange" data-id="{{item.id}}" checked="{{item.checked}}"/>
+            </checkbox-group>
+            <view class="itemDetail">
+                <image src="{{item.imageSrc}}" mode="" class="detail-img"/>
+                <view class="detail-info">
+                    <text class="title">{{item.title}}</text>
+                    <text class="days">入住天数:{{item.stayDays}}天</text>
+                    <view class="other">
+                        <text class="price">预定价格:{{item.totalPrice}}</text>
+                        <text class="del-btn" bindtap="delOrder" data-id="{{item.id}}">删除订单?</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+    <!-- 没有订单 -->
+    <view class="info-tip" wx:else>
+        <text>当前没有任何订单哦~</text>
+    </view>
+    <!-- 底部固定功能区 -->
+    <view class="order-ability">
+        <view class="ability-select">
+            <checkbox-group bindchange="">
+                <checkbox value="" bindtap="allSelectedChange" checked="{{isAllSelected}}"/>全选
+            </checkbox-group>
+        </view>
+        <view class="ability-num">
+            <text>已选:{{selectedOrderNum}}个</text>
+        </view>
+        <view class="ability-price">
+            <text>总价:{{selectedTotalPrice}}</text>
+        </view>
+        <view class="ability-btn">
+            <text bindtap="payment">去支付</text>
+        </view>
+    </view>
+</view>

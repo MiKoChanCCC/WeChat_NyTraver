@@ -1,0 +1,35 @@
+<navigation-bar title="酒店详情" color="white" background="#9195a3" back="true"></navigation-bar>
+<view class="content">
+    <view class="content-hotel">
+        <swiper class="hotel-swiper">
+            <swiper-item>
+                <image src="{{hotelInfo.imageSrc}}" mode=""/>
+            </swiper-item>
+        </swiper>
+        <view class="hotel-info">
+            <text class="info-title">{{hotelInfo.title}}</text>
+            <text class="info-scroe">评分:{{hotelInfo.score}}</text>
+            <text class="info-price">价格:{{hotelInfo.price}}</text>
+        </view>
+    </view>
+    <!-- 选择住宿日期部分 -->
+    <view class="chooseDate">
+        <view class="chooseDate-title">
+            <text>选择入住日期和离店日期</text>
+        </view>
+        <view class="chooseDate-picker">
+            <picker mode="date" class="picker-start" bindchange="dateChange" data-type="start">
+                <text>{{stayStartDate}},入住</text>
+            </picker>
+            <picker mode="date" bindchange="dateChange" data-type="end">
+                <text>{{stayEndDate}},离店</text>
+            </picker>
+        </view>
+    </view>
+    <!-- 天数及总价 -->
+    <view class="orderInfo">
+        <text>共计{{totalDays}}天</text>
+        <text>，合计:{{totalPrice}}</text>
+    </view>
+    <button bindtap="predetermine" style="width: 90%;margin-top: 60rpx;background-color: #9195a3;color:white">预定</button>
+</view>

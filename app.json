@@ -1,0 +1,61 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/orderList/orderList",
+        "pages/mine/mine",
+        "pages/city/city",
+        "pages/creatOrder/creatOrder",
+        "pages/orderDetail/orderDetail",
+        "pages/perfectUserInfo/perfectUserInfo"
+    ],
+    "subpackages": [
+        {
+            "root": "packageA/pages",
+            "pages": [
+                "traverGuide/traverGuide",
+                "hotel/hotel",
+                "hotelDetail/hotelDetail",
+                "hotelOrder/hotalOrder"
+            ]
+        }
+    ],
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "首页",
+                "iconPath": "/images/1.png",
+                "selectedIconPath": "/images/1(灰色）.png"
+            },
+            {
+                "pagePath": "pages/orderList/orderList",
+                "text": "订单",
+                "iconPath": "/images/2.png",
+                "selectedIconPath": "/images/2(灰色）.png"
+            },
+            {
+                "pagePath": "pages/mine/mine",
+                "text": "我的",
+                "iconPath": "/images/3.png",
+                "selectedIconPath": "/images/3（灰色）.png"
+            }
+        ],
+        "selectedColor": "#b1b2b3"
+    },
+    "window": {
+        "navigationBarTextStyle": "white",
+        "navigationStyle": "custom"
+    },
+    "style": "v2",
+    "rendererOptions": {
+        "skyline": {
+            "defaultDisplayBlock": true,
+            "disableABTest": true,
+            "sdkVersionBegin": "3.0.0",
+            "sdkVersionEnd": "15.255.255"
+        }
+    },
+    "componentFramework": "glass-easel",
+    "sitemapLocation": "sitemap.json",
+    "lazyCodeLoading": "requiredComponents"
+}

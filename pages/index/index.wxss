@@ -1,0 +1,167 @@
+/**index.wxss**/
+page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.scrollarea {
+  background-color: #efefef;
+  flex: 1;
+  overflow-y: scroll;
+}
+/* 轮播图部分 */
+.swiper{
+    width: 100%;
+    height: 400rpx;
+}
+.item-img{
+    width: 750rpx;
+    height: 400rpx;
+}
+.ways{
+    width: 100%;
+    height: 80rpx;
+    margin-bottom: 20rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 32rpx;
+    color: #000;
+}
+.ways view{
+    width: 200rpx;
+    text-align: center;
+    line-height: 60rpx;
+    border-bottom: 2px solid transparent;
+}
+.ways .active{
+    color: #919fa3;
+    border-bottom: 3px solid #919fa3;
+}
+/* 城市选择 */
+.citySelect{
+    width: 750rpx;
+    height: 120rpx;
+    font-size: 38rpx;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #fff;
+}
+.changeBtn{
+    width: 80rpx;
+    height: 80rpx;
+    position: relative;
+}
+.changeBtn view{
+    position: absolute;
+    z-index: 1;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    margin: auto;
+}
+.changeBtn .outer{
+    width: 80rpx;
+    height: 80rpx;
+    display: block;
+    border-radius: 50%;
+}
+.changeBtn .inner{
+    width: 60rpx;
+    height: 60rpx;
+    position: absolute;
+    left: 10rpx;
+    top: 10rpx;
+}
+.middleLine{
+    width: 90%;
+    height: 1px;
+    position: absolute;
+    left:5%;
+    background-color: #cab9b9;
+}
+.showDate{
+    width: 750rpx;
+    height: 80rpx;
+    padding: 0 25rpx;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+    color: #919191;
+    background-color: #fff;
+}
+.showDate-start{
+    display: flex;
+    justify-content: space-around;
+}
+.showDate-end{
+    display: flex;
+    justify-content: space-around;
+}
+/* 学生成人票选择部分 */
+.selectStuOrAdu{
+    width: 100%;
+    height: 80rpx;
+    margin: 15rpx auto;
+    background-color: #fff;
+}
+.selectStuOrAdu radio-group{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.line{
+    width: 2rpx;
+    height: 80%;
+    background-color: #919fad;
+}
+/* 更多选择 */
+.moreSelect{
+    width: 100%;
+    height: 80rpx;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 30rpx;
+    color: #919191;
+    background-color: #fff;
+}
+
+.confirm{
+    margin-top: 50rpx;
+}
+
+/* 推荐引导部分 */
+.recommend{
+    width: 750rpx;
+    height: 150rpx;
+    margin-top: 50rpx;
+    padding: 10rpx 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+}
+.recommend-item{
+    width: 100%;
+    height: 150rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.recommend-item image{
+    width: 60rpx;
+    height: 60rpx;
+}
+.recommend-item text{
+    display: inline-block;
+    margin-top: 10rpx;
+    font-size: 24rpx;
+    color: #919fa3;
+}

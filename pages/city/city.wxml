@@ -1,0 +1,19 @@
+<!--pages/city.wxml-->
+<navigation-bar title="搜索城市" back="{{true}}" color="white" background="#9195a3"></navigation-bar>
+<!-- 区域展示列表 -->
+<scroll-view class="area" scroll-y scroll-into-view="{{intoItem}}">
+    <view class="area-item">
+        <view class="item-content" wx:for="{{navLetters}}" wx:key="index">
+            <text class="title" id="{{item}}">{{item}}</text>
+            <view class="content" wx:for="{{cityInfo[item]}}" bindtap="selectedCity" data-city="{{el.name}}" wx:for-item="el" wx:key="index">
+                <text>{{el.name}}</text>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<!-- 固定排序导航 -->
+<view class="fixedSortNav">
+    <view class="nav-content" wx:for="{{navLetters}}" wx:key="index" bindtap="navChange" data-type="{{item}}">
+        <text class="content-item">{{item}}</text>
+    </view>
+</view>

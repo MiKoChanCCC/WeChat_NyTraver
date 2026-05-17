@@ -1,0 +1,60 @@
+/* ticket的item */
+page{
+    width: 100%;
+    height: 100vh;
+}
+.orderList{
+    width: 100%;
+    height: 90%;
+    background-color: #efefef;
+}
+.ticket-item{
+    width: 710rpx;
+    height: 400rpx;
+    margin: 30rpx 20rpx;
+    padding: 30rpx;
+    box-sizing: border-box;
+    border-radius: 20rpx;
+    background-color: #fff;
+}
+.item-title{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #708090;
+    font-size: 14px;
+    border-bottom: 1px solid #708090;
+}
+.title-left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item-address{
+    width: 100%;
+    padding: 20rpx 50rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 38rpx;
+    font-weight: bold;
+    color: #708090;
+    border-bottom: 1px solid #708090;
+}
+.item-address .item-address-img{
+    width: 200rpx;
+    height: 25rpx;
+    margin: 0 80rpx; 
+}
+.item-orderInfo{
+    width: 100%;
+    height: 180rpx;
+    padding: 20rpx 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    font-size: 30rpx;
+    color: #708090;
+}

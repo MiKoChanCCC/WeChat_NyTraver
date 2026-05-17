@@ -1,0 +1,104 @@
+<navigation-bar title="订单详情" back="{{true}}" color="white" background="#9195a3"></navigation-bar>
+<scroll-view scroll-y style="height: 90vh;">
+    <view class="ticket">
+        <view class="ticket-info">
+            <view class="start-time">
+                <text class="time">08:09</text>
+                <text class="city">{{orderDetail.trip.startCity}}</text>
+            </view>
+            <view class="other-info">
+                <text>K1199</text>
+                <text>途径：{{orderDetail.trip.startCity}}、{{orderDetail.trip.endCity}}</text>
+            </view>
+            <view class="end-time">
+                <text class="time">18:09</text>
+                <text class="city">{{orderDetail.trip.endCity}}</text>
+            </view>
+        </view>
+        <view class="ticket-userInfo">
+            <text class="userName">张三</text>
+            <view class="userInfo">
+                <view class="left">
+                    <text>身份证:360909200009126622</text>
+                    <text>购票成功</text>
+                </view>
+                <view class="right">
+                    <text>改签</text>
+                    <text>退票</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="tickets">
+        <view class="tickets-trip">
+            <view class="trip-city">
+                <view class="city-start">
+                    <text>{{orderDetail.trip.startCity}}</text>
+                </view>
+                <view class="trip-bg">
+                    <image src="/images/指向箭头.png" mode=""/>
+                </view>
+                <view class="city-end">
+                    <text>{{orderDetail.trip.endCity}}</text>
+                </view>
+            </view>
+            <view class="trip-time">
+                <text>{{orderDetail.trip.time}},8:09</text>
+                <text>{{orderDetail.trip.time}},18:09</text>
+            </view>
+            <view class="trip-seat">
+                <text>08车1A</text>
+                <text class="seat-tip">去程</text>
+            </view>
+            <view class="trip-orderNum">
+                <text>订单号:187171263718937x{{orderDetail.id}}</text>
+            </view>
+        </view>
+        <view class="tickets-trip" wx:if="{{orderDetail.type == 1}}">
+            <view class="trip-city">
+                <view class="city-start">
+                    <text>{{orderDetail.back.startCity}}</text>
+                </view>
+                <view class="trip-bg">
+                    <image src="/images/指向箭头.png" mode=""/>
+                </view>
+                <view class="city-end">
+                    <text>{{orderDetail.back.endCity}}</text>
+                </view>
+            </view>
+            <view class="trip-time">
+                <text>{{orderDetail.back.time}},8:09</text>
+                <text>{{orderDetail.back.time}},19:00</text>
+            </view>
+            <view class="trip-seat">
+                <text>08车1A</text>
+                <text class="seat-tip">返程</text>
+            </view>
+            <view class="trip-orderNum">
+                <text>订单号:18717126371000x{{orderDetail.id}}</text>
+            </view>
+        </view>
+    </view>
+
+    <view class="primary-user">
+        <view class="primary-user-title">
+            <image class="head-bg" src="/images/3.png" mode=""/>
+            <text>联系人</text>
+        </view>
+        <text>联系人：刘翠花</text>
+        <text>手机号:19977350026</text>
+    </view>
+
+    <view class="users">
+        <text style="border-bottom: 1px solid #efefef;">旅客:王老五</text>
+        <text>手机号:18878548964</text>
+    </view>
+    <view class="users">
+        <text style="border-bottom: 1px solid #efefef;">旅客:王老五</text>
+        <text>手机号:18878548964</text>
+    </view>
+    <view class="bill">
+        <text>发票:不需要</text>
+    </view>
+    <button style="width: 600rpx;background-color: #9195a3;color:#fff;margin-top:20px;" bindtap="delOrder" data-orderid="{{orderDetail.id}}">删除订单</button>
+</scroll-view>

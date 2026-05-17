@@ -1,0 +1,64 @@
+<navigation-bar title="完善用户信息" back="{{true}}" background="#9195a3" color="white"></navigation-bar>
+<view class="content">
+    <view class="userInfo">
+        <view class="userInfo-item info-name">
+            <text>联系人</text>
+            <input type="text" placeholder="请输入姓名" model:value="{{userName}}" />
+        </view>
+        <view class="userInfo-item info-sex">
+            <text>性别</text>
+            <radio-group bindchange="handlerSex">
+                <radio value="male" />男
+                <radio value="femal" checked style="margin-left:60rpx;" />女
+            </radio-group>
+        </view>
+        <view class="userInfo-item info-phone">
+            <text>手机号</text>
+            <input type="number" placeholder="请输入手机号" model:value="{{userPhone}}" />
+        </view>
+        <view class="userInfo-item info-idcart">
+            <text>身份证号</text>
+            <input type="idcard" placeholder="请输入身份证号" model:value="{{userIdcard}}" />
+        </view>
+        <view class="userInfo-item info-email">
+            <text>邮箱</text>
+            <input type="text" placeholder="请输入邮箱地址" model:value="{{userEmail}}" />
+        </view>
+    </view>
+    <!-- 开具发票 -->
+    <view class="userBill">
+        <view class="bill-title">
+            <text>发票</text>
+            <switch checked="" bindchange="switchChange" />
+        </view>
+        <view class="bill-content" wx:if="{{showBill}}">
+            <view class="bill-item">
+                <text>公司名称</text>
+                <input type="text" placeholder="请输入公司名称" />
+            </view>
+            <view class="bill-item">
+                <text>公司纳税代号</text>
+                <input type="text" placeholder="请输入公司纳税代号" />
+            </view>
+            <view class="bill-item">
+                <text>开票金额</text>
+                <input type="text" placeholder="请输入发票金额" />
+            </view>
+            <view class="bill-item">
+                <text>接收邮箱</text>
+                <input type="text" placeholder="请输入邮箱地址" />
+            </view>
+        </view>
+    </view>
+    <!-- 旅客须知 -->
+    <view class="traverGuide">
+        <checkbox-group bindchange="checkedChange">
+            <checkbox class="guide-checkbox" checked="{{isChecked}}" value="" />
+        </checkbox-group>
+        <view class="guide-read">
+            <text>我阅读并同意</text>
+            <navigator url="/packageA/pages/traverGuide/traverGuide"><span>《南云出行旅客须知》</span></navigator>
+        </view>
+    </view>
+    <button style="width: 90%;margin-top: 100rpx;background-color: #9195a3;" type="primary" bindtap="submitOrder">提交订单</button>
+</view>

@@ -1,0 +1,76 @@
+<wxs module="timeDeal">
+    module.exports = {
+        //对时间进行简单格式化
+        formateTime:function(time){
+            var timeArr = time.split(',')[0].split('-');
+            timeArr.splice(1,0,'年');
+            timeArr.splice(3,0,'月');
+            timeArr.splice(5,0,'日');
+            return timeArr.join("");
+        }
+    }
+</wxs>
+
+<navigation-bar title="创建订单" back="{{true}}" color="white" background="#9195a3"></navigation-bar>
+<view class="top">
+    <view class="top-orderTime">
+        <text>{{createOrderInfo.trip.time}}出发</text>
+        <text wx:if="{{createOrderInfo.type == 1}}">{{createOrderInfo.back.time}}返回</text>
+    </view>
+</view>
+<view class="ticket">
+    <view class="ticket-trip">
+        <view class="trip-city">
+            <view class="city-start">
+                <text>{{createOrderInfo.trip.startCity}}</text>
+            </view>
+            <view class="trip-bg">
+                <image src="/images/指向箭头.png" mode=""/>
+            </view>
+            <view class="city-end">
+                <text>{{createOrderInfo.trip.endCity}}</text>
+            </view>
+        </view>
+        <view class="trip-time">
+            <text>{{timeDeal.formateTime(createOrderInfo.trip.time)}}</text>
+            <text>{{timeDeal.formateTime(createOrderInfo.trip.time)}}</text>
+        </view>
+        <view class="trip-seat">
+            <text>08车1A</text>
+            <text class="seat-tip">去程</text>
+        </view>
+        <view class="trip-orderNum">
+            <text>订单号:1871712637189374</text>
+        </view>
+    </view>
+    <view class="ticket-trip" wx:if="{{createOrderInfo.type == 1}}">
+        <view class="trip-city">
+            <view class="city-start">
+                <text>{{createOrderInfo.back.startCity}}</text>
+            </view>
+            <view class="trip-bg">
+                <image src="/images/指向箭头.png" mode=""/>
+            </view>
+            <view class="city-end">
+                <text>{{createOrderInfo.back.endCity}}</text>
+            </view>
+        </view>
+        <view class="trip-time">
+            <text>{{timeDeal.formateTime(createOrderInfo.back.time)}}</text>
+            <text>{{timeDeal.formateTime(createOrderInfo.back.time)}}</text>
+        </view>
+        <view class="trip-seat">
+            <text>08车2F</text>
+            <text class="seat-tip">返程</text>
+        </view>
+        <view class="trip-orderNum">
+            <text>订单号:1871712637100074</text>
+        </view>
+    </view>
+</view>
+<view class="ticket-info">
+    <text>订单总价</text>
+    <text>￥888</text>
+    <text>费用明细</text>
+    <text class="submit" bindtap="next">下一步</text>
+</view>

@@ -1,0 +1,24 @@
+<!--pages/orderList/orderList.wxml-->
+<navigation-bar title="订单列表" back="{{false}}" color="white" background="#9195a3"></navigation-bar>
+<scroll-view class="orderList" scroll-y>
+    <view class="ticket-item" wx:for="{{orderList}}" wx:key="index" bindtap="goTicekerDetail" data-orderId="{{item.id}}">
+        <view class="item-title">
+            <view class="title-left">
+                <text>出行时间:{{item.trip.time}}</text>
+                <text wx:if="{{item.type === 1}}">返程时间:{{item.back.time}}</text>
+            </view>
+            <text>已支付</text>
+        </view>
+        <view class="item-address">
+            <text>{{item.trip.startCity}}</text>
+            <image class="item-address-img" src="/images/指向箭头.png" mode=""/>
+            <text>{{item.trip.endCity}}</text>
+        </view>
+        <view class="item-orderInfo">
+            <text>通知手机:17866668888</text>
+            <text>抢票车次:G4756</text>
+            <text>抢票座席:1F</text>
+            <text>抢票日期:{{item.trip.time}}</text>
+        </view>
+    </view>
+</scroll-view>
